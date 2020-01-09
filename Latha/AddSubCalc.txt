@@ -1,0 +1,90 @@
+def add(num,a,var):
+    tot= var
+    tot= tot + a
+    print("Inside Function : Num=", num, ", a=", a,", var= ", var," and tot=", tot)
+    return tot
+def sub(num,a,var):
+    if num == 0:
+       tot = a
+       print("Inside Function : Num=",num,"and a=",a," and tot=",tot)
+    else:
+       tot = var
+       tot = tot - a
+       print("Inside Function : Num=", num, ", a=", a,", var= ", var," and tot=", tot)
+    return tot
+tot=0
+var=0
+num=0
+print("Type what operation you wanted - Add / Sub")
+op = input()
+print("Enter how many numbers you wanted to Add / Sub")
+i = int(input())
+while num < i:
+    print("Enter number ", num + 1)
+    a = int(input())
+    if op == "add":
+        var = add(num, a, var)
+        print("Num =",num,"and a=",a,"Var=",var)
+    elif op == "sub":
+        var = sub(num, a,var)
+        print("Num =", num, "and a=", a, "Var=", var)
+    num = num + 1
+print ("The tot is", var)
+
+------------------------------------------------------------------------------------
+Results:
+------------------------------------------------------------------------------------
+
+Type what operation you wanted - Add / Sub
+add
+Enter how many numbers you wanted to Add / Sub
+4
+Enter number  1
+20
+Inside Function : Num= 0 , a= 20 , var=  0  and tot= 20
+Num = 0 and a= 20 Var= 20
+Enter number  2
+30
+Inside Function : Num= 1 , a= 30 , var=  20  and tot= 50
+Num = 1 and a= 30 Var= 50
+Enter number  3
+40
+Inside Function : Num= 2 , a= 40 , var=  50  and tot= 90
+Num = 2 and a= 40 Var= 90
+Enter number  4
+10
+Inside Function : Num= 3 , a= 10 , var=  90  and tot= 100
+Num = 3 and a= 10 Var= 100
+The tot is 100
+
+Process finished with exit code 0
+
+---------------------------------------------------------------
+
+Type what operation you wanted - Add / Sub
+sub
+Enter how many numbers you wanted to Add / Sub
+5
+Enter number  1
+100
+Inside Function : Num= 0 and a= 100  and tot= 100
+Num = 0 and a= 100 Var= 100
+Enter number  2
+30
+Inside Function : Num= 1 , a= 30 , var=  100  and tot= 70
+Num = 1 and a= 30 Var= 70
+Enter number  3
+25
+Inside Function : Num= 2 , a= 25 , var=  70  and tot= 45
+Num = 2 and a= 25 Var= 45
+Enter number  4
+30
+Inside Function : Num= 3 , a= 30 , var=  45  and tot= 15
+Num = 3 and a= 30 Var= 15
+Enter number  5
+2
+Inside Function : Num= 4 , a= 2 , var=  15  and tot= 13
+Num = 4 and a= 2 Var= 13
+The tot is 13
+
+Process finished with exit code 0
